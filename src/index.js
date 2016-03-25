@@ -1,2 +1,1 @@
-import hexToRGB from './hex-to-rgb'
-export default hexToRGB
+export * from './hex-to-rgb'

@@ -1,12 +1,9 @@
-var webpack = require('webpack')
-
 module.exports = {
   entry: './src/index.js',
-  // any requirements that should not be bundled in the package
-  // should go here
-  vendor: [],
   output: {
-    filename: 'lib/index.js'
+    filename: 'lib/index.js',
+    library: 'hex-to-rgb',
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
@@ -23,7 +20,4 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.json', '.coffee']
   },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor", "lib/vendor.js", Infinity)
-  ]
 };
