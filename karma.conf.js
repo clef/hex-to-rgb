@@ -3,6 +3,12 @@ webpackConfig.devtool = 'inline-source-map'
 delete webpackConfig.entry
 delete webpackConfig.output
 
+webpackConfig.postLoaders = [{
+  test: /\.(js|coffee)$/,
+  exclude: /(spec|node_modules)\//,
+  loader: 'istanbul-instrumenter'
+}]
+
 module.exports = function(config) {
   config.set({
     basePath: '.',
@@ -13,7 +19,11 @@ module.exports = function(config) {
     preprocessors: {
       'tests.bundle.js': ['webpack', 'sourcemap']
     },
-    reporters: ['progress'],
+    reporters: [
+      'dots',
+      'coverage',
+      'coveralls'
+    ],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
@@ -28,7 +38,15 @@ module.exports = function(config) {
       'karma-mocha',
       'karma-sourcemap-loader',
       'karma-webpack',
+      'karma-coverage'
     ],
-    webpack: webpackConfig
+    webpack: webpackConfig,
+    webpackMiddleware: {
+      noInfo: false
+    },
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    },
   })
 }
