@@ -30,6 +30,17 @@ import hexToRGB from '@clef/hex-to-rgb';
 
 Converts a hex color string to a RGB object
 
+## Development
+
+To start development, run:
+
+```shell
+git clone git@github.com:clef/hex-to-rgb.git hex-to-rgb
+cd hex-to-rgb
+npm install
+npm run test
+```
+
 ## License
 
 MIT
