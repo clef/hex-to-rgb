@@ -1,7 +1,6 @@
 # @clef/hex-to-rgb
 
 ![Build Status](https://img.shields.io/travis/clef/hex-to-rgb.svg)
-![Coverage](https://img.shields.io/coveralls/clef/hex-to-rgb.svg)
 ![Downloads](https://img.shields.io/npm/dm/@clef/hex-to-rgb.svg)
 ![Downloads](https://img.shields.io/npm/dt/@clef/hex-to-rgb.svg)
 ![npm version](https://img.shields.io/npm/v/@clef/hex-to-rgb.svg)
