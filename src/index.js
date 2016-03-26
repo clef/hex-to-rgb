@@ -1,1 +1,2 @@
-export * from './hex-to-rgb'
+import hexToRGB from './hex-to-rgb'
+module.exports = hexToRGB
