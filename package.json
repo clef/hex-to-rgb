@@ -10,7 +10,8 @@
     "compile": "webpack",
     "dev": "webpack-dev-server",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run test && npm run compile",
+    "postpublish": "git push origin master && git push --tags",
     "test": "karma start --single-run --browsers PhantomJS"
   },
   "devDependencies": {
