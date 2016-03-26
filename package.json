@@ -1,7 +1,7 @@
 {
   "name": "@clef/hex-to-rgb",
   "description": "A quick converter from hex to RGB",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "lib/index.js",
   "author": "jessepollak",
   "repository": "jessepollak/@clef/hex-to-rgb",
