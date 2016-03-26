@@ -22,8 +22,14 @@ npm install @clef/hex-to-rgb
 And include in your project:
 
 ```javascript
-import @clef/hex-to-rgb from '@clef/hex-to-rgb';
+import hexToRGB from '@clef/hex-to-rgb';
 ```
+
+## Usage
+
+### hexToRGB(hexString)
+
+Converts a hex color string to a RGB object
 
 ## License
 
